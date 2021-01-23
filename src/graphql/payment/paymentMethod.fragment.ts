@@ -5,6 +5,8 @@ export interface PaymentMethodType {
     name: string;
     type: string;
     info: string;
+    owner: string;
+    createdAt: Date;
 }
 
 export const PaymentMethodTypeFragment = gql`
@@ -13,5 +15,7 @@ export const PaymentMethodTypeFragment = gql`
         name
         type
         info
+        owner
+        createdAt
     }
 `;
