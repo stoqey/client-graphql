@@ -1,7 +1,7 @@
 {
   "name": "@stoqey/client-graphql",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Shared graphql fragments, queries, mutations for stoqey clients",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
