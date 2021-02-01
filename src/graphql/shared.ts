@@ -20,7 +20,7 @@ export const ResTypeFragment = gql`
 export enum SymbolSecType {
     AI = 'ai',
     CRYPTO = 'crypto',
-    STOCK = 'crypto',
+    STOCK = 'stock',
     FOREX = 'forex',
 }
 
@@ -46,4 +46,9 @@ export enum TradingStatusType {
     COMPLETE = 'complete',
     DRAFT = 'draft',
     FAIL = 'fail',
+}
+
+export enum WithdrawOrDeposit {
+    WITHDRAW = 'withdraw',
+    DEPOSIT = 'deposit',
 }
