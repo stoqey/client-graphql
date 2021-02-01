@@ -29,8 +29,8 @@ export const FORGOTPASSWORD_MUTATION = gql`
 `;
 
 export const CHANGEPASSWORD_MUTATION = gql`
-    mutation ForgotPassword($user: ChangePasswordArgs!) {
-        data: forgotPassword(user: $user) {
+    mutation ChangePassword($user: ChangePasswordArgs!) {
+        data: changePassword(user: $user) {
             ...LoginResponseTypeFragment
         }
     }
