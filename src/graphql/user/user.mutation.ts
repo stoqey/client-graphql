@@ -18,3 +18,21 @@ export const REGISTER_MUTATION = gql`
     }
     ${LoginResponseTypeFragment}
 `;
+
+export const FORGOTPASSWORD_MUTATION = gql`
+    mutation ForgotPassword($user: ForgotPasswordArgs!) {
+        data: forgotPassword(user: $user) {
+            ...LoginResponseTypeFragment
+        }
+    }
+    ${LoginResponseTypeFragment}
+`;
+
+export const CHANGEPASSWORD_MUTATION = gql`
+    mutation ForgotPassword($user: ChangePasswordArgs!) {
+        data: forgotPassword(user: $user) {
+            ...LoginResponseTypeFragment
+        }
+    }
+    ${LoginResponseTypeFragment}
+`;
