@@ -22,3 +22,12 @@ export const CREATE_WITHDRAWPAYMENT_MUTATION = gql`
     }
     ${ResTypeFragment}
 `;
+
+export const PROCESS_PAYPAL_MUTATION = gql`
+    mutation ProcessPaypalPayment($amount: Float!, $owner: String!, $orderId: String!) {
+        data: processPayPal(amount: $amount, owner: $owner, orderId: $orderId) {
+            ...ResTypeFragment
+        }
+    }
+    ${ResTypeFragment}
+`;
