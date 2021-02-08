@@ -1,10 +1,10 @@
 import gql from 'graphql-tag';
-import {TradingEnvType} from '../shared';
+// import {TradingEnvType} from '../shared';
 
 export interface TransactionType {
     id?: string;
 
-    tradeEnv?: TradingEnvType;
+    // tradeEnv?: TradingEnvType;
     owner?: string;
 
     status?: string;
@@ -23,7 +23,6 @@ export const TransactionTypeFragment = gql`
     fragment TransactionTypeFragment on TransactionType {
         id
 
-        tradeEnv
         owner
 
         status
