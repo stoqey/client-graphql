@@ -1,12 +1,6 @@
 import gql from 'graphql-tag';
 import {ResType} from '../shared';
 
-interface CurrencyBalance {
-    symbol: string; // e.g USD
-    amount: number; // e.g 2000
-    isCash: boolean; // e.g true
-}
-
 export interface UserType {
     id: string;
     firstname: string;

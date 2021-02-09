@@ -1,5 +1,5 @@
-// import gql from 'graphql-tag';
-// import { UserTypeFragment } from './user.fragment';
+import gql from 'graphql-tag';
+import {UserTypeFragment} from './user.fragment';
 
 // export const GET_END_USER = gql`
 //   query GetEnduser($id: ID) {
@@ -10,11 +10,11 @@
 //   ${EnduserFragment}
 // `;
 
-// export const GET_ME = gql`
-//   query GetMe {
-//     me {
-//       ...EnduserFragment
-//     }
-//   }
-//   ${EnduserFragment}
-// `;
+export const GET_ME = gql`
+    query GetMe {
+        me {
+            ...UserTypeFragment
+        }
+    }
+    ${UserTypeFragment}
+`;
