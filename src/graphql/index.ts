@@ -4,4 +4,5 @@ export * from './payment';
 export * from './trade';
 export * from './transaction';
 export * from './user';
+export * from './portfolio';
 // export * from './withdraw';
