@@ -14,10 +14,10 @@ export const START_PORTFOLIO_MUTATION = gql`
 `;
 
 /**
- * ClosePortfolio($id: String!)
+ * ClosePortfolio($id: String!, $owner: String!)
  */
 export const CLOSE_PORTFOLIO_MUTATION = gql`
-    mutation ClosePortfolio($id: String!) {
+    mutation ClosePortfolio($id: String!, $owner: String!) {
         data: closePortfolio(id: $id) {
             ...ResTypeFragment
         }
