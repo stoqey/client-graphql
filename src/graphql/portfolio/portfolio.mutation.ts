@@ -1,6 +1,9 @@
 import gql from 'graphql-tag';
 import {ResTypeFragment} from '../shared';
 
+/**
+ * StartPortfolio($size: Number!, $action: String!, $owner: String!)
+ */
 export const START_PORTFOLIO_MUTATION = gql`
     mutation StartPortfolio($size: Number!, $action: String!, $owner: String!) {
         data: startPortfolio(size: $size, action: $action, owner: $owner) {
@@ -10,6 +13,9 @@ export const START_PORTFOLIO_MUTATION = gql`
     ${ResTypeFragment}
 `;
 
+/**
+ * ClosePortfolio($id: String!)
+ */
 export const CLOSE_PORTFOLIO_MUTATION = gql`
     mutation ClosePortfolio($id: String!) {
         data: closePortfolio(id: $id) {
