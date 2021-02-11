@@ -5,7 +5,7 @@ import {ResTypeFragment} from '../shared';
  * StartPortfolio($size: Number!, $action: String!, $owner: String!)
  */
 export const START_PORTFOLIO_MUTATION = gql`
-    mutation StartPortfolio($size: Number!, $action: String!, $owner: String!) {
+    mutation StartPortfolio($size: Float!, $action: String!, $owner: String!) {
         data: startPortfolio(size: $size, action: $action, owner: $owner) {
             ...ResTypeFragment
         }
