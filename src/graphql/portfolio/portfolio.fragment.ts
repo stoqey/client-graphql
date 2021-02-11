@@ -4,7 +4,7 @@ import {ActionType, SymbolSecType, TradingEnvType, TradingStatusType} from '../s
 export interface PortfolioType {
     id?: string;
     owner: string;
-    name?: string;
+    // name?: string;
 
     symbol: string;
     secType: SymbolSecType;
@@ -14,9 +14,9 @@ export interface PortfolioType {
     tradeEnv?: TradingEnvType;
     status?: TradingStatusType;
     size: number; // number of shares
-    filled?: number; // profit and loss
-    remaining?: number; // profit and loss
-    pnl?: number; // profit and loss
+    // filled?: number; // profit and loss
+    // remaining?: number; // profit and loss
+    // pnl?: number; // profit and loss
     averageCost?: number;
     marketPrice?: number;
     entryTime: Date; // time when entered trade
@@ -29,7 +29,6 @@ export const PortfolioTypeFragment = gql`
     fragment PortfolioTypeFragment on PortfolioType {
         id
         owner
-        name
         symbol
         secType
         action
@@ -37,9 +36,7 @@ export const PortfolioTypeFragment = gql`
         tradeEnv
         status
         size
-        filled
-        remaining
-        pnl
+
         averageCost
         marketPrice
         entryTime
