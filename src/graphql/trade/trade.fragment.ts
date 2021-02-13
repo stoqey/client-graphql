@@ -8,6 +8,7 @@ export interface TradeType {
 
     symbol: string;
     secType: SymbolSecType;
+    positionAction?: ActionType; // used as reference for when closing a portfolio
     action: ActionType;
     exchange?: string;
 
