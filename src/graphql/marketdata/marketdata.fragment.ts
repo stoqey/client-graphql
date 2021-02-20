@@ -2,13 +2,15 @@ import gql from 'graphql-tag';
 
 export interface MarketDataType {
     id?: string;
+    name?: string;
     symbol: string;
-    volume: number;
+    changePct?: number;
+    change?: number;
     open: number;
-    close: number;
     high: number;
     low: number;
-    date: Date;
+    close: number;
+    volume: number;
 }
 
 export interface MarketSymbolInfo {
