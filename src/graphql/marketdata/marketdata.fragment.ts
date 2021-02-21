@@ -11,6 +11,7 @@ export interface MarketDataType {
     low: number;
     close: number;
     volume: number;
+    date: Date;
 }
 
 export interface MarketSymbolInfo {
