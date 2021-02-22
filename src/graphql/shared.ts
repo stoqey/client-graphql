@@ -52,3 +52,8 @@ export enum WithdrawOrDeposit {
     WITHDRAW = 'withdraw',
     DEPOSIT = 'deposit',
 }
+
+export enum OrderType {
+    MARKET = 'market',
+    LIMIT = 'limit',
+}
