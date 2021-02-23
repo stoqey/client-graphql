@@ -53,7 +53,7 @@ export enum WithdrawOrDeposit {
     DEPOSIT = 'deposit',
 }
 
-export enum OrderType {
+export enum IOrderType {
     MARKET = 'market',
     LIMIT = 'limit',
 }
