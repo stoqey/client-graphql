@@ -11,7 +11,7 @@ export const CREATE_ORDER_MUTATION = gql`
         $owner: String!
         $symbol: String
     ) {
-        data: createPaymentMethod(
+        data: createOrder(
             stopPrice: $stopPrice
             price: $price
             type: $type
