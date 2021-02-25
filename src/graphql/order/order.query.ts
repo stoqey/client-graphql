@@ -11,8 +11,8 @@ export const GET_MY_ORDERS = gql`
 `;
 
 export const GET_ALL_ORDERS = gql`
-    query orders() {
-        data: orders() {
+    query orders {
+        data: orders {
             ...OrderTypeFragment
         }
     }
