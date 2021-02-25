@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 import {OrderTypeFragment} from './order.fragment';
 
 export const ALL_ORDERS_SUBSCRIPTION = gql`
-    subscription SubOrders {
+    subscription SubAllOrders {
         data: onOrders {
             ...OrderTypeFragment
         }
@@ -11,7 +11,7 @@ export const ALL_ORDERS_SUBSCRIPTION = gql`
 `;
 
 export const MY_ORDERS_SUBSCRIPTION = gql`
-    subscription SubOrders($owner: String, $time: String) {
+    subscription SubMyOrders($owner: String, $time: String) {
         data: onOrders(owner: $owner, time: $time) {
             ...OrderTypeFragment
         }
