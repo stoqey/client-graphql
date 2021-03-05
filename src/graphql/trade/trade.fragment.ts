@@ -1,27 +1,20 @@
 import gql from 'graphql-tag';
-import {ActionType, SymbolSecType, TradingEnvType, TradingStatusType} from '../shared';
+import {ActionType} from '../shared';
 
 export interface TradeType {
     id?: string;
-    owner: string;
-    name?: string;
-
-    symbol: string;
-    secType: SymbolSecType;
-    positionAction?: ActionType; // used as reference for when closing a portfolio
     action: ActionType;
-    exchange?: string;
+    buyer: string;
+    seller: string;
+    symbol: string;
+    instrument: string;
+    qty: number;
+    price: number;
+    total?: number;
+    rejected?: boolean;
+    bidOrderId: string;
+    askOrderId: string;
 
-    tradeEnv: TradingEnvType;
-    status?: TradingStatusType;
-    size: number; // number of shares
-    filled?: number; // profit and loss
-    remaining?: number; // profit and loss
-    pnl?: number; // profit and loss
-    averageCost?: number;
-    marketPrice?: number;
-    entryTime: Date; // time when entered trade
-    exitTime?: Date; // when closed
     createdAt?: Date;
     updatedAt?: Date;
 }
@@ -29,24 +22,17 @@ export interface TradeType {
 export const TradeTypeFragment = gql`
     fragment TradeTypeFragment on TradeType {
         id
-        owner
-        name
-        symbol
-        secType
         action
-        exchange
-        tradeEnv
-        status
-        size
-        filled
-        remaining
-        pnl
-        averageCost
-        marketPrice
-        entryTime
-        exitTime
+        buyer
+        seller
+        symbol
+        instrument
+        qty
+        price
+        rejected
+        bidOrderId
+        askOrderId
         createdAt
         updatedAt
-        deleted
     }
 `;
