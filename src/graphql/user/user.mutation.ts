@@ -1,6 +1,15 @@
 import gql from 'graphql-tag';
 import {LoginResponseTypeFragment} from './user.fragment';
 
+export const UPDATE_USER_WALLET = gql`
+    mutation UpdateUserWallet($userId: String!, $amount: Float!, $source: String) {
+        update: updateUserWallet(userId: $userId, amount: $amount, source: $source) {
+            success
+            message
+        }
+    }
+`;
+
 export const PHONE_LOGIN_MUTATION = gql`
     mutation PhoneLogin($phone: String!, $firebaseToken: String!, $createNew: Boolean!) {
         data: phoneLogin(phone: $phone, firebaseToken: $firebaseToken, createNew: $createNew) {
