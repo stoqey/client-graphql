@@ -10,6 +10,15 @@ import {UserTypeFragment} from './user.fragment';
 //   ${EnduserFragment}
 // `;
 
+export const GET_ALL_USERS = gql`
+    query GetAllUsers($search: String, $page: Float, $limit: Float) {
+        users(search: $search, page: $page, limit: $limit) {
+            ...UserTypeFragment
+        }
+    }
+    ${UserTypeFragment}
+`;
+
 export const GET_ME = gql`
     query GetMe {
         me {
