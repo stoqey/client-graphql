@@ -31,6 +31,8 @@ export const MarketDataTypeFragment = gql`
         id
         symbol
         volume
+        change
+        changePct
         open
         close
         high
