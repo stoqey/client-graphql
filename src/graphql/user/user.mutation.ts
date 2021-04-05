@@ -1,5 +1,6 @@
 import gql from 'graphql-tag';
 import {LoginResponseTypeFragment} from './user.fragment';
+import {ResTypeFragment} from '../shared';
 
 export const UPDATE_USER_WALLET = gql`
     mutation UpdateUserWallet($userId: String!, $amount: Float!, $source: String) {
@@ -35,6 +36,15 @@ export const REGISTER_MUTATION = gql`
         }
     }
     ${LoginResponseTypeFragment}
+`;
+
+export const ADD_USER_MUTATION = gql`
+    mutation AddUser($user: CreateUserArgs!) {
+        data: addUser(user: $user) {
+            ...ResTypeFragment
+        }
+    }
+    ${ResTypeFragment}
 `;
 
 export const FORGOTPASSWORD_MUTATION = gql`
