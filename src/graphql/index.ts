@@ -6,4 +6,4 @@ export * from './trade';
 export * from './transaction';
 export * from './user';
 export * from './portfolio';
-// export * from './withdraw';
+export * from './withdraw';
