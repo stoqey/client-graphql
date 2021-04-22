@@ -1,10 +1,12 @@
 import gql from 'graphql-tag';
+import {StatusType} from '../shared';
 
 export interface WithdrawRequestType {
     id: string;
     owner: string;
     amount: number;
-    status?: string;
+    status?: StatusType;
+    notes?: string;
     paymentMethod?: string;
     createdAt?: Date;
     updatedAt?: Date;

@@ -35,9 +35,12 @@ export enum ActionType {
 }
 
 export enum StatusType {
+    DRAFT = 'draft',
     PENDING = 'pending',
+    PROCESSING = 'processing',
     SUCCESS = 'success',
     FAIL = 'fail',
+    REJECTED = 'rejected',
 }
 
 export enum TradingStatusType {
