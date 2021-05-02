@@ -9,3 +9,12 @@ export const CREATE_WITHDRAWREQUEST_MUTATION = gql`
     }
     ${ResTypeFragment}
 `;
+
+export const CANCEL_WITHDRAWREQUES_MUTATION = gql`
+    mutation CancelWithdrawRequest($id: String!, $owner: String) {
+        data: cancelWithdrawRequests(id: $id, owner: $owner) {
+            ...ResTypeFragment
+        }
+    }
+    ${ResTypeFragment}
+`;
