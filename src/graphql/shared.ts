@@ -36,7 +36,9 @@ export enum ActionType {
 
 export enum StatusType {
     DRAFT = 'draft',
+    SUBMITTED = 'submitted',
     PENDING = 'pending',
+    CONFIRMED = 'confirmed',
     PROCESSING = 'processing',
     SUCCESS = 'success',
     FAIL = 'fail',
