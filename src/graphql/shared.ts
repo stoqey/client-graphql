@@ -42,6 +42,7 @@ export enum StatusType {
     PROCESSING = 'processing',
     SUCCESS = 'success',
     FAIL = 'fail',
+    CANCELED = 'canceled',
     REJECTED = 'rejected',
 }
 
