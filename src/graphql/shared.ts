@@ -59,6 +59,12 @@ export enum WithdrawOrDeposit {
     DEPOSIT = 'deposit',
 }
 
+export enum WithdrawPaymentMethodType {
+    BANK = 'bank',
+    ETRANSFER = 'etransfer',
+    MOBILEMONEY = 'mobilemoney',
+}
+
 export enum IOrderType {
     MARKET = 'market',
     LIMIT = 'limit',
