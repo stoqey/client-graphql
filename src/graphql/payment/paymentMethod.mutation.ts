@@ -10,6 +10,15 @@ export const CREATE_PAYMENTMETHOD_MUTATION = gql`
     ${ResTypeFragment}
 `;
 
+export const DELETE_PAYMENTMETHOD_MUTATION = gql`
+    mutation DeletePaymentMethod($id: String!, $owner: String) {
+        data: deletePaymentMethod(id: $id, owner: $owner) {
+            ...ResTypeFragment
+        }
+    }
+    ${ResTypeFragment}
+`;
+
 export const CREATE_WITHDRAWPAYMENT_MUTATION = gql`
     mutation CreateWithdrawPayment($amount: Float!, $owner: String!, $paymentMethodId: String!) {
         data: createWithdrawPayment(
