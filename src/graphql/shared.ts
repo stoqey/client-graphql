@@ -60,6 +60,7 @@ export enum WithdrawOrDeposit {
 }
 
 export enum WithdrawPaymentMethodType {
+    CRYPTO = 'crypto',
     BANK = 'bank',
     ETRANSFER = 'etransfer',
     MOBILEMONEY = 'mobilemoney',
