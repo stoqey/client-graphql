@@ -10,8 +10,8 @@ export const GET_WITHDRAW_REQUESTS = gql`
     ${WithdrawRequestTypeFragment}
 `;
 
-export const GET_ALL_WITHDRAW_REQUESTS = gql`
-    query GetAllWithdrawRequests($filter: String, $limit: Float, $page: Float) {
+export const ADMIN_GET_ALL_WITHDRAW_REQUESTS = gql`
+    query AdminGetAllWithdrawRequests($filter: String, $limit: Float, $page: Float) {
         data: allWithdrawRequests(filter: $filter, limit: $limit, page: $page) {
             ...WithdrawRequestTypeFragment
         }
