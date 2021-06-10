@@ -20,8 +20,8 @@ export const CANCEL_WITHDRAWREQUEST_MUTATION = gql`
 `;
 
 export const ADMIN_CONFIRM_WITHDRAWREQUEST_MUTATION = gql`
-    mutation AdminConfirmWithdrawRequest($id: String!, $status: String) {
-        data: confirmWithdrawRequest(id: $id, status: $status) {
+    mutation AdminConfirmWithdrawRequest($id: String!, $status: String, $message: String) {
+        data: confirmWithdrawRequest(id: $id, status: $status, message: $message) {
             ...ResTypeFragment
         }
     }
