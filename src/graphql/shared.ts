@@ -70,3 +70,8 @@ export enum IOrderType {
     MARKET = 'market',
     LIMIT = 'limit',
 }
+
+export interface GeoLocationType {
+    lat: number;
+    lon: number;
+}
